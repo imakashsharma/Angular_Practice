@@ -1,0 +1,42 @@
+.signup_up_container{
+    padding-top:50px;
+}
+.signup_form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+}
+input[type=text],
+[type=number],
+[type=date],
+select {
+    width: 15vw;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+input[type=button] {
+    font-size: 12px;
+    height: 5vh;
+    width: 15vw;
+    border: 2px solid balck;
+    background-color: #42b72a;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: white;
+    color: #42b72a;
+    border-color: #42b72a;
+    transform: scale(1.01);
+    transition: 1s;
+}

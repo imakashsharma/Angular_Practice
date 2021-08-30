@@ -1,0 +1,21 @@
+.primary{
+color: black;
+}
+.success{
+color: green;
+}
+.warning{
+color: red;
+}
+.danger{
+color: yellow;    
+}
+.input-group{
+    margin-bottom: 10px;
+}
+.input-group > input{
+display: block;
+}
+.hide{
+    display: none;
+}

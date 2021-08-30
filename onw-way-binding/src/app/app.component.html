@@ -1,0 +1,51 @@
+<input type="text" (keyup)="setText($event)">
+<div>
+  <p>Fonr Size:{{ textSize }}PX</p>
+  <!-- input event reflect changes with the while doing the Changes -->
+  <p>Input Event</p>
+  <input (input)="sizeSetter($event)" type="range" min="10" max="110" value="10">
+  <br>
+  <!-- change event reflect changes after done with the Changes -->
+  <p>Change Event</p>
+  <input (change)="sizeSetter($event)" type="range" min="10" max="110" value="10">
+  <br>
+  <button (click)="setSize('inc')">+</button>
+  <button (click)="setSize('dec')">-</button>
+</div>
+<select (change)="setColor($event)">
+  <option value="primary">Primary</option>
+  <option value="success">Success</option>
+  <option value="warning">Warning</option>
+  <option value="danger">Danger</option>
+</select>
+<p [style.fontSize.px]="textSize" [class]='textCls'> {{ text }} </p>
+
+<section [class.hide]="isDataSubmitted">
+  <div class="input-group">
+    <label>Name</label>
+    <input type="text" name="name" (keyup)="setValue($event)" [value]="person.name">
+  </div>
+  <div class="input-group">
+    <label>Email</label>
+    <input type="text" name="email" (keyup)="setValue($event)" [value]="person.email">
+  </div>
+  <div class="input-group">
+    <label>Company Name</label>
+    <input type="text" name="cmp" (keyup)="setValue($event)" [value]="person.cmp">
+  </div>
+  <div class="input-group">
+    <label>Salary</label>
+    <input type="text" name="sal" (keyup)="setValue($event)" [value]="person.sal">
+  </div>
+  <button (click)="submitData()">SUBMIT</button>
+</section>
+
+<section [class.hide]="!isDataSubmitted">
+  <p>Thanks for Your Details</p>
+  <hr>
+  <p>Name: {{person.name }}</p>
+  <p>Email: {{person.email }} </p>
+  <p>Company: {{person.cmp }} </p>
+  <p>Sallary: {{person.sal }} </p>
+  <button (click)="resetForm()">SUBMIT ANOTHER FORM</button>
+</section>

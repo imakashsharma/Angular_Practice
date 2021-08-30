@@ -1,0 +1,10 @@
+<h1>Form in JS</h1>
+<form #signinform="ngForm" (ngSubmit)="getValues(signinform.value)">
+  <input type="text" ngModel name="user_name">
+  <br>
+  <br>
+  <input type="text" ngModel name="age">
+  <br>
+  <br>
+  <button>Get User Values</button>
+</form>

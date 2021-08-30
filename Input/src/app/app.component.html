@@ -1,0 +1,5 @@
+<h1>Input Fields in Angular</h1>
+<!-- <input type="text" (keyup)="getVal($event.target.value)" /> -->
+<h2>{{currentVal}}</h2>
+<input type="text" #box />
+<button (click)="getVal(box.value)">Get Value</button>

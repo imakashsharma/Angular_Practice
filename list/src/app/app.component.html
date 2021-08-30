@@ -1,0 +1,24 @@
+<app-heroes [title]="title" [name]="name" [mySentences]="mySentences" [akash]="akash"></app-heroes>
+<h2>{{msg}}</h2>
+
+
+
+
+<table class="table table-trapped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Ammount</th>
+            <th>Get User Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of transectiontable">
+            <td>{{data.id}}</td>
+            <td>{{data.type}}</td>
+            <td>{{data.ammount}}</td>
+            <td><button class="btn"(click)="getCurrentUser(data)">Get User</button></td>
+        </tr>
+    </tbody>
+</table>
